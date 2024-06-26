@@ -1,0 +1,16 @@
+---
+const { title, link, href, download } = Astro.props;
+---
+
+<div
+  class=`${Astro.props.class} w-full max-h-full h-56 flex flex-col items-center justify-center text-white`
+>
+  <h1 class="text-[26px] font-semibold text-center uppercase mb-4">{title}</h1>
+  <a
+    target="_blank"
+    download={download}
+    href={href}
+    class=`${Astro.props.hover} w-48 max-w-full text-center text-lg border-2 border-white font-semibold rounded-md py-[6px] px-6 hover:bg-white transition-colors`
+    >{link}</a
+  >
+</div>

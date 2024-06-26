@@ -1,0 +1,23 @@
+---
+import IconIco from "../assets/svg/IconIco.astro";
+import IconPhone from "../assets/svg/IconPhone.astro";
+import IconUbication from "../assets/svg/IconUbication.astro";
+---
+
+<header id="inicio" class="w-full flex justify-center py-4 px-8 max-sm:hidden">
+  <nav class="w-full flex justify-between items-center max-w-[1440px]">
+    <picture>
+      <IconIco />
+    </picture>
+    <ul class="flex gap-4">
+      <li class="flex gap-2"><IconUbication /> Av. Lafuente 3202 CABA</li>
+      <li class="flex gap-2"><IconPhone /> 011-4918-9200</li>
+    </ul>
+    <a
+      href="https://vps-2204421-x.dattaweb.com:2094/login.php?idn"
+      target="_blank"
+      class="w-44 max-w-full text-center bg-blue-900 text-white text-lg font-semibold rounded-md py-[6px] px-6 transition-opacity hover:opacity-90"
+      >Administración</a
+    >
+  </nav>
+</header>
