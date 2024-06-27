@@ -16,10 +16,14 @@ import { Image } from "astro:assets";
   <Navbar />
   <a
     href="#inicio"
+    title="Ir a Inicio"
     class="flex justify-center items-center w-12 h-12 bg-red-800 rounded-md absolute max-sm:right-6 max-sm:bottom-6 right-12 bottom-8 z-20"
     ><IconArrow /></a
   >
-  <main id="inicio" class="w-full h-full flex justify-center items-center flex-col">
+  <main
+    id="inicio"
+    class="w-full h-full flex justify-center items-center flex-col"
+  >
     <section
       class="w-full flex relative justify-center max-w-[1440px] h-[600px] bg-center bg-cover bg-[url('../img/HeroImg.webp')]"
     >
@@ -40,6 +44,7 @@ import { Image } from "astro:assets";
             <a
               href="https://www.facebook.com/p/Instituto-Cristo-Obrero-Villa-Soldati-100070706805569/?locale=es_LA"
               target="_blank"
+              title="Seguinos en Facebook"
               ><IconFacebook
                 class="w-7 fill-blue-100 hover:fill-blue-300 transition-colors"
               />
@@ -49,6 +54,7 @@ import { Image } from "astro:assets";
             <a
               href="https://www.instagram.com/cristoobrerosoldati/"
               target="_blank"
+              title="Seguinos en Instagram"
               ><IconInstagram
                 class="w-7 fill-blue-100 hover:fill-blue-300 transition-colors"
               /></a
@@ -58,6 +64,7 @@ import { Image } from "astro:assets";
             <a
               href="https://www.youtube.com/@cristoobrero-villasoldati8216"
               target="_blank"
+              title="Suscribite a nuestro canal de Youtube"
               ><IconYoutube
                 class="w-8 h-8 fill-blue-100 hover:fill-blue-300 transition-colors"
               /></a
@@ -72,21 +79,24 @@ import { Image } from "astro:assets";
         <Card
           class="bg-blue-950"
           hover="hover:text-blue-950"
-          title="Mesas de Examen"
+          mainTitle="Mesas de Examen"
+          title="Ir a Mesas de Examen"
           link="Ver Información"
           href="https://docs.google.com/forms/d/e/1FAIpQLSc4f-xtMR_07TcIrGC3oKtGcz6WK0UW2TLy12ufQgzREwFu4g/closedform"
         />
         <Card
           class="bg-yellow-500"
           hover="hover:text-yellow-500"
-          title="Solicitud de Vacantes"
+          mainTitle="Solicitud de Vacantes"
+          title="Solicitar Vacantes"
           link="Inscripción"
           href="https://docs.google.com/forms/d/e/1FAIpQLScruPeAoSpPC4L4fTmqr4EG6Ryg0AP9jOJD0o1IEV1LrGrdUw/viewform"
         />
         <Card
           class="bg-red-800"
           hover="hover:text-red-800"
-          title="Reglamento de Becas"
+          mainTitle="Reglamento de Becas"
+          title="Descargar Reglamento de Becas"
           link="Descargar"
           download="Inscripcion2024.jpg"
           href="./src/assets/img/Inscripcion2024.jpg"
@@ -111,14 +121,13 @@ import { Image } from "astro:assets";
             day="Martes 25-06 (9:30 hs)"
             subject="Sistemas de Información Contable 4°"
           />
-          <Date day="Jueves 27-6 (7:30 hs)" subject="Matemática 5°" />
           <Date
             day="Jueves 27-06 (8:50 hs)"
             subject="Energía, Radición y Vida 5° - Química 5° - Inglés 5°"
           />
-          <Date day="Jueves 27-6 (10:30 hs)" subject="Lengua 5°" />
+          <Date day="Jueves 27-06 (10:30 hs)" subject="Lengua 5°" />
           <Date
-            day="Viernes 28-6 (8:50 hs)"
+            day="Viernes 28-06 (8:50 hs)"
             subject="Filosofía de la Ciencia y la Tecnología 4° - EDI (Religión 5°) - Filosofía 5°"
           />
         </ul>
@@ -136,20 +145,22 @@ import { Image } from "astro:assets";
         </h2>
       </header>
 
-      <footer class="h-full grid grid-cols-auto-images place-items-center gap-10" >
+      <footer
+        class="h-full grid grid-cols-auto-images place-items-center gap-10"
+      >
         <div class="w-full h-full flex flex-col">
           <picture class="w-full">
             <Image class="w-[480px]" src={Post1} alt="post 1" />
           </picture>
           <a
-          class="w-[480px] max-w-full mt-4 bg-blue-900 text-white text-center text-lg border-2 font-semibold rounded-md py-[6px] px-6 transition-opacity hover:opacity-90"
-          download="Inscripciónes 2025 - Instituto Cristo Obrero"
-          href="./src/assets/img/Post1.webp">Descargar</a
-        >
+            class="w-[480px] max-w-full mt-4 bg-blue-900 text-white text-center text-lg border-2 font-semibold rounded-md py-[6px] px-6 transition-opacity hover:opacity-90"
+            download="Inscripciónes 2025 - Instituto Cristo Obrero"
+            href="./src/assets/img/Post1.webp">Descargar</a
+          >
         </div>
-      <picture class="w-full max-w-full flex justify-center items-center">
-        <Image class="w-[600px]" src={IlusSchool} alt="post 1" />
-      </picture>
+        <picture class="w-full max-w-full flex justify-center items-center">
+          <Image class="w-[600px]" src={IlusSchool} alt="post 1" />
+        </picture>
       </footer>
     </section>
   </main>

@@ -1,12 +1,13 @@
 ---
-const { title, link, href, download } = Astro.props;
+const { mainTitle,title, link, href, download } = Astro.props;
 ---
 
 <div
   class=`${Astro.props.class} w-full max-h-full h-56 flex flex-col items-center justify-center text-white`
 >
-  <h1 class="text-[26px] font-semibold text-center uppercase mb-4">{title}</h1>
+  <h1 class="text-[26px] font-semibold text-center uppercase mb-4 text-white">{mainTitle}</h1>
   <a
+    title={title}
     target="_blank"
     download={download}
     href={href}
